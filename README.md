@@ -11,7 +11,7 @@ This is a simple java application used by the Command Line Interface that encode
 
 ##### Setup Instructions and Installation
 
-- First fork this `https://github.com/MwitaBrian/Caesar-cipher.git` repository to your own repository.
+- First fork this `https://github.com/MwitaBrian/CaesarCipher.git` repository to your own repository.
 - Then use the `git clone` command on your terminal to create a local file.
 - Make sure you have the necessary text editor or IDE needed to run the app. E.g. Atom or IntelliJ.
 - Open the **entire** directory in your IDE or text editor.
