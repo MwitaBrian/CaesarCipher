@@ -1,7 +1,7 @@
 package models;
 public class Cipher {
     public String encrypt(){
-        String CipherText = "Mwita";
+        String CipherText = "";
         return CipherText;
     }
 }
