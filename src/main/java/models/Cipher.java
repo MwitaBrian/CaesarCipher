@@ -35,8 +35,37 @@ public class Cipher {
         return EncryptedText;
     }
 
-    public String decrypt(){
+    public String decrypt(String encodedText){
+        String userInput = "Mwita";
         String newUserInput = "";
+
+        int length = encodedText.length();
+        for (int i = 0; i < length; i++){
+            char ch = encodedText.charAt(i);
+            if (Character.isLetter(ch)){
+                if (Character.isLowerCase(ch)){
+                    char newCh = (char) (ch - shift);
+                    if (newCh < 'a'){
+                        newUserInput += (char)(ch + (26 - shift));
+                    }
+                    else {
+                        newUserInput += newCh;
+                    }
+                }
+                else if (Character.isUpperCase(ch)){
+                    char newCh = (char) (ch - shift);
+                    if (newCh < 'A'){
+                        newUserInput += (char)(ch + (26 - shift));
+                    }
+                    else {
+                        newUserInput += newCh;
+                    }
+                }
+            }
+            else {
+                newUserInput += ch;
+            }
+        }
         return newUserInput;
     }
 }

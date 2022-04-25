@@ -50,7 +50,7 @@ class CipherTest {
     @DisplayName("decrypt Method Returns String")
     public void decrypt_decryptMethodReturnsString_String(){
         Cipher cipher = new Cipher();
-        assertEquals(true, cipher.decrypt()instanceof String);
+        assertEquals(true, cipher.decrypt("")instanceof String);
     }
 
     @Test
@@ -58,12 +58,12 @@ class CipherTest {
     public void decrypt_returnsSameUserInput_String(){
         int shift = 7;
         Cipher cipher = new Cipher();
-        String userInput = "Mwita";
+        String userInput = "A";
         String newUserInput = "";
-        String EncryptedText = cipher.encrypt(userInput);
-        int length = EncryptedText.length();
+        String encodedText = cipher.encrypt(userInput);
+        int length = encodedText.length();
         for (int i = 0; i < length; i++){
-            char letters = EncryptedText.charAt(i);
+            char letters = encodedText.charAt(i);
             if (Character.isLetter(letters)){
                 if (Character.isLowerCase(letters)){
                     char newLetters = (char) ('a' - (letters + 'a' - shift) % 26);
@@ -78,7 +78,7 @@ class CipherTest {
                 newUserInput += letters;
             }
         }
-        assertEquals(true, cipher.decrypt().equals(userInput));
+        assertEquals(true, cipher.decrypt("H").equals(userInput));
     }
 
 
