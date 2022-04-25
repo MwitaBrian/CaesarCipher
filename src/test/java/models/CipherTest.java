@@ -9,9 +9,9 @@ class CipherTest {
     @Test
     @DisplayName("Return Empty String")
     public void encrypt_emptyCipheredStringIsReturned_String(){
-        Cipher newCipher = new Cipher();
+        Cipher cipher = new Cipher();
         String CipherText = "";
-        assertEquals(CipherText, newCipher.encrypt());
+        assertEquals(CipherText, cipher.encrypt());
     }
 
 }
