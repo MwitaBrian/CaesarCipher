@@ -8,7 +8,11 @@ public class Cipher {
         int length = userInput.length();
         for (int i = 0; i < length; i++) {
             char letters = userInput.charAt(i);
+            if (Character.isLetter(letters)) {
 
+            } else {
+
+            }
         }
         return EncryptedText;
     }

@@ -26,5 +26,27 @@ class CipherTest {
         }
     }
 
+    @Test
+    @DisplayName("Test that letters variable is a letter.")
+    public void encrypt_checkCharacterInStringIsLetter_boolean(){
+        Cipher cipher = new Cipher();
+        String EncryptedText = "";
+        String userInput = "Mwita";
+        int length = userInput.length();
+        for (int i = 0; i < length; i++){
+            char letters = userInput.charAt(i);
+            if (Character.isLetter(letters)){
+                if (Character.isLowerCase(letters)){
+
+                } else if (Character.isUpperCase(letters)) {
+
+                }
+            }else {
+                EncryptedText += letters;
+            }
+            assertEquals(true, Character.isLetter(letters));
+        }
+    }
+
 
 }
