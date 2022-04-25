@@ -6,8 +6,9 @@ public class Cipher {
         String EncryptedText = "";
 
         int length = userInput.length();
-        for (int i = 0; i < length; i++){
+        for (int i = 0; i < length; i++) {
             char letters = userInput.charAt(i);
+
         }
         return EncryptedText;
     }

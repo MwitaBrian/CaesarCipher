@@ -16,14 +16,15 @@ class CipherTest {
 
     @Test
     @DisplayName("For Loop Returns characters from userInput")
-    public void encrypt_forLoopReturnsCharactersFromUserInput_Char(){
+    public void encrypt_forLoopReturnsCharactersFromUserInput_int(){
         Cipher cipher = new Cipher();
-        String userInput = "Wordle";
+        String userInput = "Mwita";
         int length = userInput.length();
         for (int i = 0; i < length; i++){
             char letters = userInput.charAt(i);
-            assertEquals(5,length);
+            assertEquals(5, length);
         }
     }
+
 
 }
