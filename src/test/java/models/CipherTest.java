@@ -53,6 +53,34 @@ class CipherTest {
         assertEquals(true, cipher.decrypt()instanceof String);
     }
 
+    @Test
+    @DisplayName("decrypt Method returns same String as userInput")
+    public void decrypt_returnsSameUserInput_String(){
+        int shift = 7;
+        Cipher cipher = new Cipher();
+        String userInput = "Mwita";
+        String newUserInput = "";
+        String EncryptedText = cipher.encrypt(userInput);
+        int length = EncryptedText.length();
+        for (int i = 0; i < length; i++){
+            char letters = EncryptedText.charAt(i);
+            if (Character.isLetter(letters)){
+                if (Character.isLowerCase(letters)){
+                    char newLetters = (char) ('a' - (letters + 'a' - shift) % 26);
+                    newUserInput += newLetters;
+                }
+                else if (Character.isUpperCase(letters)){
+                    char newLetters = (char) ('A' - (letters + 'A' - shift) % 26);
+                    newUserInput += newLetters;
+                }
+            }
+            else {
+                newUserInput += letters;
+            }
+        }
+        assertEquals(true, cipher.decrypt().equals(userInput));
+    }
+
 
 
 
