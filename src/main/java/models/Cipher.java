@@ -1,7 +1,7 @@
 package models;
 public class Cipher {
 
-    int shift = 7;
+    private int shift = 7;
     public String encrypt(String userInput){
         String EncryptedText = "";
 

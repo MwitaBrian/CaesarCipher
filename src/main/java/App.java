@@ -14,5 +14,8 @@ public class App {
 
         System.out.println("Enter shift Key: (1-25)");
         int shift = shiftKey.nextInt();
+
+        String EncryptedText = newCipher.encrypt(userInput);
+        System.out.println(EncryptedText);
     }
 }
