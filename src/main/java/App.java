@@ -8,6 +8,7 @@ public class App {
         Scanner shiftKey = new Scanner(System.in);
         Cipher cipher = new Cipher();
 
+        System.out.println("--------------------------------");
         System.out.println("Welcome to Caesar Cipher Program.");
         System.out.println("Please enter the Text you would like to Encrypt:");
         String userInput = input.nextLine();
