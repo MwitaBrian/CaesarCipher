@@ -36,6 +36,7 @@ public class Cipher {
     }
 
     public String decrypt(){
-        return null;
+        String newUserText = "";
+        return newUserText;
     }
 }
