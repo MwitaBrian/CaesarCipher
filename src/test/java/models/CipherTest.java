@@ -46,6 +46,14 @@ class CipherTest {
         }
     }
 
+    @Test
+    @DisplayName("decrypt Method Returns String")
+    public void decrypt_decryptMethodReturnsString_String(){
+        Cipher cipher = new Cipher();
+        assertEquals(true, cipher.decrypt()instanceof String);
+    }
+
+
 
 
 
