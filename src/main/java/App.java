@@ -17,5 +17,9 @@ public class App {
 
         String EncryptedText = cipher.encrypt(userInput);
         System.out.println("Your encrypted message is "+ EncryptedText);
+
+        String decipheredText = cipher.decrypt(EncryptedText);
+        System.out.println("Your deciphered text is: " + decipheredText);
+        System.out.println(decipheredText);
     }
 }
