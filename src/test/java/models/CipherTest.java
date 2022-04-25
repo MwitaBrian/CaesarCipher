@@ -10,8 +10,20 @@ class CipherTest {
     @DisplayName("Return Empty String")
     public void encrypt_emptyCipheredStringIsReturned_String(){
         Cipher cipher = new Cipher();
-        String CipherText = "";
-        assertEquals(CipherText, cipher.encrypt());
+        String EncryptedText = "";
+        assertEquals(EncryptedText, cipher.encrypt(""));
+    }
+
+    @Test
+    @DisplayName("For Loop Returns characters from userInput")
+    public void encrypt_forLoopReturnsCharactersFromUserInput_Char(){
+        Cipher cipher = new Cipher();
+        String userInput = "Wordle";
+        int length = userInput.length();
+        for (int i = 0; i < length; i++){
+            char letters = userInput.charAt(i);
+            assertEquals(5,length);
+        }
     }
 
 }
