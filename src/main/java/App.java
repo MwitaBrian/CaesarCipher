@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Scanner shiftKey = new Scanner(System.in);
-        Cipher newCipher = new Cipher();
+        Cipher cipher = new Cipher();
 
         System.out.println("Welcome to Caesar Cipher Program.");
         System.out.println("Please enter the Text you would like to Encrypt:");
@@ -15,7 +15,7 @@ public class App {
         System.out.println("Enter shift Key: (1-25)");
         int shift = shiftKey.nextInt();
 
-        String EncryptedText = newCipher.encrypt(userInput);
-        System.out.println(EncryptedText);
+        String EncryptedText = cipher.encrypt(userInput);
+        System.out.println("Your encrypted message is "+ EncryptedText);
     }
 }
