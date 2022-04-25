@@ -34,4 +34,8 @@ public class Cipher {
         }
         return EncryptedText;
     }
+
+    public String decrypt(){
+        return null;
+    }
 }
