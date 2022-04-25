@@ -38,8 +38,6 @@ class CipherTest {
             if (Character.isLetter(letters)){
                 if (Character.isLowerCase(letters)){
 
-                } else if (Character.isUpperCase(letters)) {
-
                 }
             }else {
                 EncryptedText += letters;
@@ -47,6 +45,10 @@ class CipherTest {
             assertEquals(true, Character.isLetter(letters));
         }
     }
+
+
+
+
 
 
 }
